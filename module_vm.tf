@@ -1,4 +1,4 @@
-module "example-vm" {
+module "example-vm_1" {
   source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
   env_name       = "stage"
   network_id     = yandex_vpc_network.develop.id
@@ -20,7 +20,7 @@ module "example-vm" {
 
 }
 
-module "example-vm" {
+module "example-vm_2" {
   source         = "git::https://github.com/udjin10/yandex_compute_instance.git?ref=main"
   env_name       = "stage"
   network_id     = yandex_vpc_network.develop.id
