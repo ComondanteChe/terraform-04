@@ -11,7 +11,7 @@ module "example-vm" {
 
   labels = {
     owner= "e.osipov"
-    project = "marketing"
+    project = "analytics"
   }
 
   metadata = {
