@@ -26,13 +26,12 @@ module "test-vm" {
   subnet_zones   = ["ru-central1-a","ru-central1-b"]
   subnet_ids     = [yandex_vpc_subnet.develop_a.id,yandex_vpc_subnet.develop_b.id]
   instance_name  = "webs"
-  instance_count = 2
+  instance_count = 1
   image_family   = "ubuntu-2004-lts"
   public_ip      = true
 
   labels = { 
-    owner= "i.ivanov",
-    project = "accounting"
+      project = "analytics"
      }
 
   metadata = {
@@ -52,6 +51,9 @@ module "example-vm" {
   instance_count = 1
   image_family   = "ubuntu-2004-lts"
   public_ip      = true
+  labels = { 
+      project = "marketing"
+     }
 
   metadata = {
     user-data          = data.template_file.cloudinit.rendered #Для демонстрации №3
