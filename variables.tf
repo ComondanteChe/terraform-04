@@ -33,7 +33,7 @@ variable "vpc_name" {
 
 ###common vars
 
-variable "vms_ssh_root_key" {
+variable "ssh_public_key" {
   type        = string
   default     = "your_ssh_ed25519_key"
   description = "ssh-keygen -t ed25519"
