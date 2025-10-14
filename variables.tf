@@ -35,7 +35,7 @@ variable "vpc_name" {
 
 variable "ssh_public_key" {
   type        = string
-  default     = "your_ssh_ed25519_key"
+  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIfVKappDvBQ9kbqze6JrwUpNwdaS9/W8TH47whYi2ls administrator@Educational"
   description = "ssh-keygen -t ed25519"
 }
 
