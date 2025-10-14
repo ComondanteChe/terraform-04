@@ -15,6 +15,7 @@ module "marketing-vm" {
   }
 
   metadata = {
+    user-data = "${file("${path.module}/cloud-init.yml")}"
     serial-port-enable = 1
   }
 
@@ -37,6 +38,7 @@ module "analytics-vm" {
   }
 
   metadata = {
+    user-data = "${file("${path.module}/cloud-init.yml")}"
     serial-port-enable = 1
   }
 
