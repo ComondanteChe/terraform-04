@@ -3,5 +3,5 @@ output "out" {
 }
 
 output "cloud-init" {
-   value = data.template_file.ssh_key
+   value = data.template_file.ssh_key.rendered
 }
