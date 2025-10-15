@@ -34,8 +34,8 @@ variable "vpc_name" {
 ###common vars
 
 variable "ssh_public_key" {
-  type        = list(string)
-  default     = ["id_ed25519.pub"]
+  type        = string
+  default     = "id_ed25519.pub"
   description = "ssh-keygen -t ed25519"
 }
 
