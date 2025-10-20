@@ -19,11 +19,19 @@ variable "default_zone" {
   default     = "ru-central1-a"
   description = "https://cloud.yandex.ru/docs/overview/concepts/geo-scope"
 }
-variable "default_cidr" {
-  type        = list(string)
-  default     = ["10.0.1.0/24"]
-  description = "https://cloud.yandex.ru/docs/vpc/operations/subnet-create"
-}
+
+# variable "default_cidr" {
+#   type        = list(string)
+#   default     = ["10.0.1.0/24"]
+#   description = "https://cloud.yandex.ru/docs/vpc/operations/subnet-create"
+# }
+
+# variable = "subnet" {
+#   type = list(object({
+#       zone = string
+#       v4_cidr = list(string)
+#   }))
+# }
 
 variable "vpc_name" {
   type        = string
@@ -35,7 +43,7 @@ variable "vpc_name" {
 
 variable "ssh_public_key" {
   type        = string
-  default     = "/home/administrator/.ssh/id_ed25519.pub"
+  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIIfVKappDvBQ9kbqze6JrwUpNwdaS9/W8TH47whYi2ls administrator@Educational"
   description = "ssh-keygen -t ed25519"
 }
 
