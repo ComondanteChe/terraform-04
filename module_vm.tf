@@ -34,7 +34,10 @@ module "marketing-vm" {
   }
 
   metadata = {
-    user-data = "${file("${path.module}/cloud-init.yml")}"
+    user-data = templatefile("${path.module}/cloud-init.yml", { 
+      ssh_public_key = var.ssh_public_key
+      HOSTNAME = "web-marketing"
+     })
     serial-port-enable = 1
   }
 
@@ -57,7 +60,10 @@ module "analytics-vm" {
   }
 
   metadata = {
-    user-data = "${file("${path.module}/cloud-init.yml")}"
+    user-data = templatefile("${path.module}/cloud-init.yml", { 
+      ssh_public_key = var.ssh_public_key
+      HOSTNAME = "web-marketing"
+      })
     serial-port-enable = 1
   }
 

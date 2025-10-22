@@ -1,9 +1,9 @@
-data template_file "ssh_key" {
-  template = file("${path.module}/cloud-init.yml")
+# data template_file "ssh_key" {
+#   template = file("${path.module}/cloud-init.yml")
 
-    vars = {
-       ssh_public_key = var.ssh_public_key
-       HOSTNAME = var.vm_web_name
-    }
-}
+#     vars = {
+#        ssh_public_key = var.ssh_public_key
+#        HOSTNAME = var.vm_web_name
+#     }
+# }
 
